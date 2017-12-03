@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Bootstrap the first pull from bit bucket.
-# WARNING At this time it is a private repository so you need a valid key in ~/.ssh/xx_rsa (or whatever you want to call it)
+# Bootstrap the first pull from github.
 # cd /home/ec2-user
-# git clone git@bitbucket.org:Tomella/elvis-finder.git
+# git clone https://github.com/Tomella/elvis-finder.git
+# cd elvis-finder
 # bower install
 
 # Should be home already but make sure.
@@ -14,10 +14,10 @@ git pull
 bower update
 
 # Copy static content to Apache. We need a virtual domain registered. See the comment block below for more context.
-if [ ! -d /var/www/finder ]; then
-  sudo mkdir -p /var/www/finder;
+if [ ! -d /var/www/metadata ]; then
+  sudo mkdir -p /var/www/metadata
 fi
-sudo cp -rf dist/* /var/www/finder
+sudo cp -rf dist/* /var/www/metadata
 
 ## Consider these behaviours for future capability like node services
 # We used to update any proxies that might have changed here but it became unweildly so

@@ -1,0 +1,134 @@
+[
+   {
+      "name": "Geoscience Australia",
+      "title": "Geoscience Australia",
+      "href": "http://www.ga.gov.au",
+      "enabled": true,
+      "code": "ga",
+      "image": "finder/resources/img/Geoscience Australia.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "NSW Government",
+      "title": "NSW Land & Property Information",
+      "href": "http://spatialservices.finance.nsw.gov.au/",
+      "enabled": true,
+      "code": "lpi",
+      "image": "finder/resources/img/NSW.jpg",
+      "height": 42,
+      "ccLicence": 3,
+      "showText": false
+   },
+   {
+      "name": "ACT Government",
+      "title": "ACT Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": true,
+      "code": "act",
+      "image": "finder/resources/img/logo-ACT.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "QLD Government",
+      "title": "QLD Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": true,
+      "code": "qld",
+      "image": "finder/resources/img/Qld.gif",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "TAS Government",
+      "title": "TAS Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": true,
+      "code": "tas",
+      "image": "finder/resources/img/logo-Tas.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "NT Government",
+      "title": "NT Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": false,
+      "code": "nt",
+      "image": "finder/resources/img/logo-NT.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "SA Government",
+      "title": "SA Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": false,
+      "code": "sa",
+      "image": "finder/resources/img/logo-SA.png",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "WA Government",
+      "title": "WA Government",
+      "href": "http://www.ga.gov.au",
+      "enabled": false,
+      "code": "wa",
+      "image": "finder/resources/img/logo-WA.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "VIC Government",
+      "title": "VIC Government",
+      "href": "http://www.delwp.vic.gov.au/",
+      "enabled": true,
+      "code": "vic",
+      "image": "finder/resources/img/Victoria-State-Gov-DELWP-right-pms-2945-rgb.png",
+      "height": 34,
+      "showText": false
+   },
+   {
+      "name": "ICSM - ANZLIC Committee on Surveying &amp; Mapping",
+      "title": "ICSM - ANZLIC Committee on Surveying &amp; Mapping",
+      "href": "http://www.ga.gov.au",
+      "enabled": false,
+      "code": "icsm",
+      "image": "finder/resources/img/icsm-logo-sml.gif",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "PCPN - Permanent Committee on Place Names",
+      "title": "PCPN - Permanent Committee on Place Names",
+      "href": "http://www.ga.gov.au",
+      "enabled": true,
+      "code": "pcpn",
+      "image": "finder/resources/img/PCPN_Logo.jpg",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "FSDF",
+      "title": "FSDF",
+      "href": "http://fsdf.org.au/",
+      "enabled": false,
+      "code": "fsdf",
+      "image": "finder/resources/img/FSDFimagev4.0.png",
+      "height": 42,
+      "showText": false
+   },
+   {
+      "name": "Elevation &amp; Depth",
+      "title": "Elevation &amp; Depth",
+      "href": "http://fsdf.org.au/LINK/fsdf-theme/2427",
+      "enabled": false,
+      "class": "elevation-and-depth",
+      "code": "elevation",
+      "image": "finder/resources/img/ElevationAndDepth.png",
+      "height": 42,
+      "showText": false
+   }
+]

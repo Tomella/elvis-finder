@@ -1,0 +1,8 @@
+<div ng-if="subtypes">
+   <div ng-show="subtypes.length > paging.pageSize" paging page="paging.page" page-size="paging.pageSize" total="subtypes.length" paging-action="setPage(page, pageSize)"></div>
+</div>
+<div>
+   <div ng-repeat="item in data">
+      <metadata-item item="item"></metadata-item>
+   </div>
+</div>

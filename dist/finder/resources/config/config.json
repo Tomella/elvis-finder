@@ -1,0 +1,127 @@
+{
+   "map":{
+   	"name" : "main",
+      "options":{
+      	 "maxBounds" : [[-85, 106],[-6, 159]],
+         "center":[-32, 137.6],
+         "minZoom":3,
+         "maxZoom":16,
+         "zoom":6
+      },
+      "position":{
+         "bounds":[
+            [-44, 117],
+            [-12, 146]
+         ],
+         "minZoom":13
+      },
+      "layers":[
+         {
+            "name":"Australian Topography",
+            "defaultLayer":true,
+            "isBaselayer":true,
+            "type":["TileLayer"],
+            "key":"topography",
+            "parameters":[
+               "http://services.ga.gov.au/site_7/rest/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer/tile/{z}/{y}/{x}",
+                {
+                   "minZoom:": 8,
+                   "maxZoom": 16,
+                   "switch": "topography",
+                   "attribution": "Map data © <a target='_blank' href='http://services.ga.gov.au/site_7/rest/services/NationalMap_Colour_Topographic_Base_World_WM/MapServer'>Geoscience Australia</a> and contributors"
+                }
+            ],
+            "addLayerControl":false,
+            "visible":true
+         },
+         {
+            "name":"All",
+            "pseudoBaseLayer" : true,
+            "type":["TileLayer", "WMS"],
+            "key":"indexes",
+            "parameters":[
+                "https://elvis20161a-ga.fmecloud.com/fmedatastreaming/elvis_indexes/GetPNG_ElevationAvailableData.fmw",
+                {
+                   "layers" : "public.5dem_ProjectsIndex,public.NSW_100k_Index_54,public.NSW_100k_Index_55,public.NSW_100k_Index_56,public.NSW_100k_Index_Forward_Program,public.ACT2015-Tile_Index_55,public.QLD_Project_Index_54,public.QLD_Project_Index_55,public.QLD_Project_Index_56",
+                   "format" : "image/png",
+                   "transparent" : true,
+                   "opacity" : 0.7
+                }
+            ],
+            "addLayerControl":false,
+            "visible":true
+         }
+      ]
+   },
+   "layerSwitch": {
+      "extentUrl": "icsm/resources/data/NSWExtentGeoJSON.json",
+      "outside": "topography",
+      "inside": "nswTopo"
+   },
+   "hideGoogleLink": true,
+   "authorities": [
+      {
+         "code": "AAD",
+         "jurisdiction": "Australian Government",
+         "name": "Australian Antarctic Division"
+      },
+      {
+         "code": "AHO",
+         "jurisdiction": "Australian Government",
+         "name": "Australian Hydrographic Service"
+      },
+      {
+         "code": "GA",
+         "jurisdiction": "Australian Government",
+         "name": "Geoscience Australia"
+      },
+      {
+         "code": "ACT",
+         "jurisdiction": "Australian Capital Territory",
+         "name": "ACT Planning and Land Authority"
+      },
+      {
+         "code": "NSW",
+         "jurisdiction": "New South Wales",
+         "name": "Geographical Names Board"
+      },
+      {
+         "code": "NT",
+         "jurisdiction": "Northern Territory",
+         "name": "Department of Planning and Infrastructure"
+      },
+      {
+         "code": "QLD",
+         "jurisdiction": "Queensland",
+         "name": "Department of Natural Resources and Water"
+      },
+      {
+         "code": "SA",
+         "jurisdiction": "South Australia",
+         "name": "Department for Transport, Energy and Infrastructure Land Services Group"
+      },
+      {
+         "code": "TAS",
+         "jurisdiction": "Tasmania",
+         "name": "Department of Primary Industries and Water"
+      },
+      {
+         "code": "VIC",
+         "jurisdiction": "Victoria",
+         "name": "Department of Sustainability and Environment"
+      },
+      {
+         "code": "WA",
+         "jurisdiction": "Western Australia",
+         "name": "Landgate"
+      }
+   ],
+   "solr": {
+      "selectUrl": "elevation/select",
+      "metadataFacetUrl": "/elevation/select?facet=on&facet.limit=-1&rows=0&wt=json&indent=on&q=metadata_id:*&json.facet={categories:{type:%20terms,%20field%20:%20metadata_id,facet:{x:%20%22sum(file_size)%22},limit:30}}",
+      "metadataRecordsUrl": "elevation/select?rows=100000&wt=json&indent=on&rows=30"
+   },
+   "metadata": {
+      "allMetadataUrl": "metadata/select?indent=on&q=*:*&wt=json&rows=10000"
+   }
+}

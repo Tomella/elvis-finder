@@ -1,0 +1,42 @@
+<div>
+   <span style="float:left; width:70%">
+      <h4>
+         Project in Detail
+      </h4>
+   </span>
+   <button style="float:right; padding:4px" class="undecorated" ng-click="clear()">[Return to Projects]</button>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+            <span style="font-weight:bold">
+               {{metadata.source}} -
+               <finder-metadata-link
+                  hover="'Metadata ID: ' + metadata.metadata_id"
+                  url="metadata.metadata_url"
+                  name="metadata.title">
+               </finder-metadata-link>
+            </span>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            {{metadata.abstract}}<br/>
+            <strong>
+               Metadata ID:
+               <finder-metadata-link
+                  hover="'Metadata ID: ' + metadata.metadata_id"
+                  url="metadata.metadata_url"
+                  name="metadata.metadata_id">
+               </finder-metadata-link>
+            </strong>
+         </div>
+      </div>
+      <div class="row" ng-repeat="(key, value) in datasets">
+         <div class="col-md-12">
+            <h5 class="type-heading">{{key}}</h5>
+            <metadata-type type="value"></metadata-type>
+         </div>
+      </div>
+   </div>
+   <download-continue datatree="datasets"></download-continue>
+</div>

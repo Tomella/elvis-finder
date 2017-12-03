@@ -1,0 +1,35 @@
+<div style="padding:5px" ng-mouseenter="show(metadata)" ng-mouseleave="hide(metdata)">
+   <div class="row" style="font-weight:bold" ng-hide="metadata.show">
+      <div class="col-md-8">
+         <button type="button" class="undecorated" title="View full title and abstract of this dataset" ng-click="metadata.show= true">
+            <i class="fa fa-2x fa-caret-right" style="font-size:120%"></i>
+         </button>
+         <button type="button" class="undecorated" title="Select project" ng-click="select()">
+            <i class="fa fa-2x fa-square-o" style="font-size:120%"></i>
+         </button>
+         <finder-zoom title="Zoom to and restrict search to this data set's extent" item="metadata"></finder-zoom>
+         <div style="width:85%;float:right;" class="ellipsis" title="{{metadata.title}}">
+            {{metadata.source}} -
+            <finder-metadata-link hover="metadata.title" url="metadata.metadata_url" name="metadata.title"></finder-metadata-link>
+         </div>
+      </div>
+      <div class="col-md-4">
+         {{item.count}} matches, {{item.file_size | fileSize}}
+      </div>
+   </div>
+   <div class="row" ng-show="metadata.show">
+      <div class="col-md-12">
+         <button type="button" class="undecorated" title="Hide full title and abstract of this dataset" ng-click="metadata.show = false">
+            <i class="fa fa-2x fa-caret-down" style="font-size:120%"></i>
+         </button>
+         <button type="button" class="undecorated" title="Select project" ng-click="select()">
+            <i class="fa fa-2x fa-square-o" style="font-size:120%"></i>
+         </button>
+         <span style="font-weight:bold">
+            {{metadata.source}} -
+            <finder-metadata-link hover="metadata.title" url="metadata.metadata_url" name="metadata.title"></finder-metadata-link>
+         </span>
+         ({{item.count}} matches, {{item.file_size | fileSize}}) - {{metadata.abstract}}
+      </div>
+   </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container-fluid" style="padding-bottom: 35px;">
+   <div class="row" ng-repeat="(key, value) in type">
+      <h5>
+         <span>{{key}} ({{value.length| number}} files, {{value | sumFiles | fileSize}})</span>
+         <span class="pull-right">
+            <button class="pull-right undecorated ng-binding" ng-click="toggleAll(value)">
+               [<span ng-if="allSelected(value)">Deselect</span><span ng-if="!allSelected(value)">Select</span> all]
+            </button>
+         </span>
+      </h5>
+      <div ng-show="value | anySelected">
+         Selected {{value | selected | length | number}} files, {{value | selected | sumFiles | fileSize}}
+      </div>
+      <metadata-subtype subtypes="value"></metadata-subtype>
+   </div>
+</div>

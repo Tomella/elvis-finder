@@ -1,0 +1,16 @@
+<div ng-show="selection">
+   <metadata-view></metadata-view>
+</div>
+<div ng-show="!selection">
+   <h4 style="padding-right:10px">
+      Projects in Map View
+   </h4>
+   <div style="padding: 5px;padding-bottom:10px">Bounded by: {{state.bounds.west | number : 4}}° west,
+   {{state.bounds.north | number : 4}}° north,
+   {{state.bounds.east | number : 4}}° east,
+   {{state.bounds.south | number : 4}}° south
+   </div>
+   <div ng-repeat="item in data.list">
+      <metadata-match item="item" metadata="metadata.map[item.name]"></metadata-match>
+   </div>
+</div>

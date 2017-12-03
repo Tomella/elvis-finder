@@ -1,0 +1,10 @@
+<div ng-mouseenter="show()" ng-mouseleave="hide()">
+   <span>
+      <input type="checkbox" ng-model="item.selected" />
+      <finder-cc org-name="item.source"></finder-cc>
+      {{item.file_name}}
+   </span>
+   <span class="pull-right">
+      {{item.file_size | fileSize}}
+   </span>
+</div>

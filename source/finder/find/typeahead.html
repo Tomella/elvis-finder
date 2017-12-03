@@ -1,0 +1,6 @@
+<a elevation-options ng-mouseenter="enter()" ng-mouseleave="leave()" tooltip-append-to-body="true" tooltip-placement="bottom"
+   uib-tooltip-html="match.model | findTooltip">
+   <span ng-bind-html="match.model.file_name | uibTypeaheadHighlight:query"></span>
+   (
+   <span ng-bind-html="match.model.source"></span>)
+</a>
